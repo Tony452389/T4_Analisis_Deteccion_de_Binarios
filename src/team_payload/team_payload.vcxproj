@@ -139,11 +139,13 @@
   <ItemGroup>
     <ClCompile Include="file_ops.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="memory_sim.cpp" />
     <ClCompile Include="suspicious.cpp" />
     <ClCompile Include="system.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="file_ops.h" />
+    <ClInclude Include="memory_sim.h" />
     <ClInclude Include="suspicious.h" />
     <ClInclude Include="system.h" />
   </ItemGroup>
