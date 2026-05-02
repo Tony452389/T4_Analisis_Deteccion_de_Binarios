@@ -1,0 +1,83 @@
+# ==============================
+# Archivos temporales
+# ==============================
+
+*.log
+*.tmp
+
+# ==============================
+# Compilación C++
+# ==============================
+
+*.obj
+*.o
+*.ilk
+*.pdb
+
+# ==============================
+# Carpetas de compilación
+# ==============================
+
+Debug/
+Release/
+build/
+
+# Build outputs internas
+x64/
+x86/
+
+# ==============================
+# Archivos del sistema
+# ==============================
+
+.DS_Store
+Thumbs.db
+
+# ==============================
+# Visual Studio
+# ==============================
+
+.vs/
+*.vcxproj.user
+
+# IntelliSense
+ipch/
+
+# Visual Studio temporary files
+*.tlog
+*.lastbuildstate
+*.recipe
+
+# ==============================
+# Python cache
+# ==============================
+
+__pycache__/
+*.pyc
+
+# ==============================
+# CMake (por si se usa)
+# ==============================
+
+CMakeFiles/
+CMakeCache.txt
+
+# ==============================
+# Ignorar ejecutables generados automáticamente
+# ==============================
+
+/src/dev/
+
+# Ignorar builds automáticos dentro de bin
+/bin/**/Debug/
+/bin/**/Release/
+
+# Ignorar ejecutable base sin versionar
+bin/dev/team_payload.exe
+
+# ==============================
+# Permitir ejecutables versionados
+# ==============================
+
+!/bin/dev/team_payload_v*.exe
+!/bin/final/team_payload.exe
