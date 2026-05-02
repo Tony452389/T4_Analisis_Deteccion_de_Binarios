@@ -14,8 +14,6 @@ void performDelay();
 //Nota: Esta función utiliza la función MessageBoxA de la API de Windows para mostrar un mensaje emergente al usuario. El mensaje se muestra con un título y un ícono de información. Puedes personalizar el mensaje, el título y el tipo de ícono según tus preferencias.
 void showFinalMessage();
 
-//----------------------------------------------------------------------------------------- V2 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 //Funcion que verifica debugger
 //Nota: Esta función utiliza la función IsDebuggerPresent de la API de Windows para verificar si el programa está siendo ejecutado bajo un depurador. Si se detecta un depurador, se muestra un mensaje de advertencia al usuario. Esta función es útil para evitar que el programa sea analizado o modificado por depuradores.
 bool checkDebugger();

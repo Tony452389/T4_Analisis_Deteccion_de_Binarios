@@ -42,11 +42,11 @@ void createDummyFile() {
 
 		CloseHandle(hFile);
 
-		std::cout << "Dummy file created at: "
+		std::cout << "\nDummy file created at: "
 			<< filPath << std::endl;
 	}
 	else {
-		std::cout << "Failed to create dummy file. Error code: "
+		std::cout << "\nFailed to create dummy file. Error code: "
 			<< GetLastError() << std::endl;
 	}
 }

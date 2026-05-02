@@ -19,7 +19,7 @@ void showFinalMessage() {
 	MessageBoxA(
 		NULL,
 		"Execution Complete",
-		"team_sample",
+		"team_payload",
 		MB_OK | MB_ICONINFORMATION
 	);
 }
@@ -39,7 +39,7 @@ bool checkDebugger() {
 
 std::string requestPassword() {
 	std::string password;
-	std::cout << "Enter password: ";
+	std::cout << "\nEnter password: ";
 	std::cin >> password;
 	return password;
 }
