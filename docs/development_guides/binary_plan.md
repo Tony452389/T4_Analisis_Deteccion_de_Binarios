@@ -8,8 +8,7 @@ Proyecto: **T4_Analisis_Deteccion_de_Binarios**
 
 El objetivo del binario principal es desarrollar un ejecutable educativo que simule técnicas ofensivas comunes en malware, pero de manera completamente **segura y controlada**, con el propósito de facilitar actividades de:
 
-* Análisis estático
-* Ingeniería inversa (Ghidra)
+* Análisis estático e Ingeniería inversa (Ghidra)
 * Debugging dinámico (x64dbg)
 * Análisis de memoria
 * Detección mediante YARA
