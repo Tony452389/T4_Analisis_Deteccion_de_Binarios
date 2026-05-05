@@ -27,7 +27,7 @@ No se permite trabajar directamente en **main**.
 Formato sugerido:
 
 ```text
-feature/static-analysis-nombre  
+feature/development-nombre  
 feature/ghidra-nombre  
 feature/debug-nombre  
 feature/detection-nombre  
@@ -36,7 +36,7 @@ feature/detection-nombre
 Ejemplo:
 
 ```text
-feature/static-analysis-josue  
+feature/development-josue  
 feature/ghidra-marco  
 feature/debug-ricardo  
 feature/detection-sergio  
@@ -86,7 +86,7 @@ Cada integrante tendrá responsabilidades específicas dentro del proyecto.
 
 Responsable:
 
-**Josue**
+**Josue Castro**
 
 Actividades:
 
@@ -106,11 +106,11 @@ docs/development_guides/
 
 ---
 
-## Ingeniería Inversa (Ghidra)
+## Analisis Estatico e Ingeniería Inversa (Ghidra)
 
 Responsable:
 
-**Marco**
+**Marco Vargas**
 
 Actividades:
 
@@ -133,7 +133,7 @@ screenshots/ghidra/
 
 Responsable:
 
-**Ricardo**
+**Ricardo Estrada**
 
 Actividades:
 
@@ -156,7 +156,7 @@ screenshots/dynamic/
 
 Responsable:
 
-**Sergio**
+**Sergio Sepulveda**
 
 Actividades:
 
@@ -214,7 +214,6 @@ Organización sugerida:
 screenshots/
 
 ├── static_analysis/
-├── ghidra/
 ├── dynamic/
 └── yara/
 ```
