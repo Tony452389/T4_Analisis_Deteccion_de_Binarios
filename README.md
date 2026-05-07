@@ -164,16 +164,11 @@ T4_Analisis_Deteccion_de_Binarios/
 │
 ├── screenshots/
 │   ├── static_analysis/
-│   ├── ghidra/
 │   ├── dynamic/
 │   └── yara/
 │
-├── src/
-│   └── team_payload/
-│
-└── static_analysis/
-    ├── outputs/
-    └── tools/
+└── src/
+    └── team_payload/
 ```
 
 ---
@@ -190,9 +185,9 @@ Durante el desarrollo y análisis se utilizaron las siguientes herramientas:
 
 ### Análisis Estático
 
-* Scripts de análisis PE
-* Extracción de strings
 * Ghidra
+* Extracción de strings
+
 
 ### Análisis Dinámico
 
@@ -215,13 +210,12 @@ El desarrollo del proyecto siguió un flujo estructurado:
 1. Diseño del comportamiento del binario
 2. Implementación modular en C++
 3. Generación de versiones progresivas
-4. Análisis estático
-5. Ingeniería inversa con Ghidra
-6. Debugging dinámico
-7. Análisis de memoria
-8. Ejecución de CAPA
-9. Creación de reglas YARA
-10. Documentación final
+4. Análisis estático e ingeniería inversa con Ghidra
+5. Debugging dinámico
+6. Análisis de memoria
+7. Ejecución de CAPA
+8. Creación de reglas YARA
+9. Documentación final
 
 ---
 
@@ -279,8 +273,7 @@ screenshots/
 
 Organizadas por:
 
-* Static Analysis
-* Ghidra
+* Static Analysis (Ghidra)
 * Dynamic Analysis
 * YARA
 
@@ -317,8 +310,8 @@ Equipo de trabajo:
 
 | Integrante                           | Rol Principal                              |
 | ------------------------------------ | ------------------------------------------ |
-| **Josue Israel Castro Aguilar**      | Desarrollo del binario y análisis estático |
-| **Marco Antonio Vargas Ruiz**        | Ingeniería inversa (Ghidra)                |
+| **Josue Israel Castro Aguilar**      | Desarrollo del binario                     |
+| **Marco Antonio Vargas Ruiz**        | Analisis Estatico (Ghidra)                 |
 | **Ricardo Hervey Estrada Garcia**    | Debugging dinámico                         |
 | **Sergio Pedro Sepulveda Rodriguez** | Detección (YARA / CAPA)                    |
 

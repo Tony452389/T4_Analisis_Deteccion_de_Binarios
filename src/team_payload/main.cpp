@@ -4,6 +4,7 @@
 #include "suspicious.h"
 #include "system.h"
 #include "file_ops.h"
+#include "memory_sim.h"
 
 int main() {
 	printSuspiciousStrings();
@@ -20,6 +21,7 @@ int main() {
 		return 0;
 	}
 
+	simulateMemoryAllocation();
 	launchCalculator();
 	performDelay();
 	createDummyFile();
