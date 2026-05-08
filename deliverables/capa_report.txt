@@ -10,18 +10,16 @@ SHA256: bdc709b6fff9bc5334d9e3c6b8e483cc332eea3abff9aeae40a1fb888d70a7d
 
 Mapeo MITRE ATT&CK
 T1497.001 – Defense Evasion: Virtualization/Sandbox Evasion mediante System Checks
-T1083 – Discovery: Enumeración de archivos y directorios
 T1129 – Execution: Uso de módulos compartidos para ejecución
 
 Malware Behavior Catalog (MBC)
 B0009 – Anti-Behavioral Analysis: Detección de entornos virtuales (VirtualBox)
-E1083 – Discovery: Exploración de sistema de archivos
 C0052 – File System: Escritura de archivos en disco
 C0007 – Memory: Reserva de memoria dinámica
 C0017 – Process: Creación de procesos en Windows
 
 Capacidades Técnicas Identificadas
-Anti-VM: Presencia de cadenas específicas para VirtualBox → anti-vm/vm-detection
+Anti-VM: Presencia de cadenas relacionadas con entornos virtualizados → anti-vm/vm-detection
 Depuración: Inclusión de ruta PDB en el binario → pe/pdb
 File System:
 Obtención de rutas comunes de archivos → file-system
@@ -34,6 +32,6 @@ Load Code: Parsing del encabezado PE → load-code/pe
 
 Implicaciones Técnicas
 Evasión de análisis: El uso de cadenas anti-VM indica que el binario intenta detectar entornos de análisis (sandbox/virtualización) para modificar su comportamiento o abortar ejecución.
-Persistencia y ejecución: La capacidad de crear procesos y asignar memoria RWX sugiere potencial para inyección de código en procesos legítimos.
-Interacción con el sistema: Escritura de archivos y exploración de directorios apunta a actividades de reconocimiento interno y posible dropper o stager.
+Ejecución y memoria dinamica: La capacidad de crear procesos y asignar memoria RWX simula comportamientos comunmente asociados a carga y ejecución dinamica de codigo en memoria.
+Interacción con el sistema: Escritura de archivos y exploración de directorios apunta a actividades de reconocimiento interno y comportamiento similar al de herramientas que manipulan archivos temporalmente durante la ejecución.
 Indicadores de depuración: La presencia de rutas PDB puede dar pistas sobre el entorno de desarrollo o el autor.

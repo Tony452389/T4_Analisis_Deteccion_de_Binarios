@@ -49,9 +49,10 @@ Una región RWX es peligrosa porque permite:
 1. **Escribir** código arbitrario (shellcode) en esa región
 2. **Ejecutarlo** directamente desde memoria, sin necesidad de escribir nada en disco
 
-Este es el mecanismo central detrás de técnicas como process injection, shellcode execution y fileless malware. El binario simula esta reserva de forma segura — la memoria se reserva pero no se escribe ni ejecuta código malicioso en ella.
+Este es el mecanismo central detrás de técnicas como carga dinamica de codigo, ejecucion en memoria y malware fileless. El binario simula esta reserva de forma segura — la memoria se reserva pero no se escribe ni ejecuta código malicioso en ella.
+La llamada ocurre unicamente despues de validar correctamente la contraseña ingresada por el usuario
 
-Las soluciones EDR modernas y reglas YARA monitorean activamente llamadas a `VirtualAlloc` con permisos RWX como indicador de compromiso (IoC).
+Las soluciones EDR modernas y reglas YARA utilizan este tipo de llamadas como indicadores comunes de comportamientos sospechosos.
 
 ![VirtualAlloc](../screenshots/dynamic/03_breakpoint_VirtualAlloc.png)
 
@@ -87,8 +88,8 @@ Durante la ejecución se cargaron las siguientes librerías del sistema:
 
 El análisis dinámico confirmó dos técnicas ofensivas simuladas en el binario:
 
-1. **Anti-debugging** mediante `IsDebuggerPresent` — el binario detecta activamente la presencia de un debugger, comportamiento común en malware que intenta evadir análisis.
+1. **Anti-debugging basico** mediante `IsDebuggerPresent` — el binario detecta activamente la presencia de un debugger, comportamiento común en malware que intenta evadir análisis.
 
-2. **Reserva de memoria RWX** mediante `VirtualAlloc` — el binario solicita memoria con permisos de ejecución en tiempo de ejecución, simulando el patrón usado en inyección de código y ejecución fileless.
+2. **Reserva de memoria RWX** mediante `VirtualAlloc` — el binario solicita memoria con permisos de ejecución en tiempo de ejecución, simulando patrones comunmente asociados a ejecucion dinamica de codigo en memoria y malware fileless.
 
 Ambas técnicas, aunque implementadas de forma segura y controlada, replican patrones reales que serían detectados por herramientas EDR, reglas YARA y soluciones antivirus modernas.
