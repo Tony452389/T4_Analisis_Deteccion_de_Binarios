@@ -88,6 +88,7 @@ Entre ellos:
 * Delay programado
 * Creación de archivo temporal
 * Mensaje final de ejecución
+* Uso de VirtualAlloc con permisos PAGE_EXECUTE_READWRITE (RWX)
 
 Estas técnicas permiten observar patrones comunes utilizados en análisis de seguridad.
 
@@ -183,10 +184,10 @@ Durante el desarrollo y análisis se utilizaron las siguientes herramientas:
 * C++
 * Windows API
 
-### Análisis Estático
+### Análisis Estático (Ghidra)
 
 * Ghidra
-* Extracción de strings
+* Revision de imports y strings del ejecutable
 
 
 ### Análisis Dinámico
@@ -224,7 +225,7 @@ El desarrollo del proyecto siguió un flujo estructurado:
 Durante el análisis del binario se espera identificar:
 
 * Uso de funciones del sistema operativo
-* Asignación de memoria ejecutable
+* Asignación dinamica de memoria RWX
 * Ejecución de procesos externos
 * Creación de archivos temporales
 * Strings identificables
@@ -287,7 +288,7 @@ La regla desarrollada para detectar el binario se encuentra en:
 detection/yara/team_rule.yar
 ```
 
-Esta regla permite identificar el binario mediante cadenas únicas presentes en el ejecutable.
+La regla utiliza strings sospechosas y APIs relevantes presentes en el ejecutable para identificar el binario.
 
 ---
 
